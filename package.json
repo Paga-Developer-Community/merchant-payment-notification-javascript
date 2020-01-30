@@ -1,0 +1,80 @@
+{
+  "name": "merchant-notification-reverse-api",
+  "description": "A boilerplate application for node, mongo  that enables Paga to process automated real-time payment transactions with the Merchant's systems using secure RestFul Web Services",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nwabuokei Nnamd",
+    "email": "nnwabuokeinnamdi88@gmail.com"
+  },
+  "engines": {
+    "node": ">=10.x"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon server.js",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
+    "pretest": "eslint .",
+    "prod": "pm2-runtime start ecosystem.config.js --env production"
+  },
+  "dependencies": {
+    "async": "^3.1.0",
+    "body-parser": "~1.19.0",
+    "co": "~4.6.0",
+    "compression": "~1.7.4",
+    "connect-flash": "~0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "~1.4.4",
+    "cross-env": "^6.0.3",
+    "crypto": "^1.0.1",
+    "csurf": "1.10.0",
+    "dotenv": "^8.2.0",
+    "express": "~4.17.1",
+    "express-jwt": "^5.3.1",
+    "express-session": "~1.17.0",
+    "helmet": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "method-override": "~3.0.0",
+    "mongojs": "^3.1.0",
+    "mongoose": "^5.8.1",
+    "morgan": "~1.9.1",
+    "nodemailer": "^6.4.2",
+    "nodemailer-express-handlebars": "^3.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pm2": "~4.2.1",
+    "pug": "~2.0.4",
+    "uuid": "^3.3.3",
+    "view-helpers": "~0.2.0",
+    "winston": "~3.2.1"
+  },
+  "devDependencies": {
+    "@hapi/joi": "15.0.3",
+    "babel-eslint": "~10.0.3",
+    "babel-tape-runner": "~3.0.0",
+    "eslint": "~6.7.2",
+    "eslint-config-prettier": "~6.7.0",
+    "eslint-plugin-prettier": "~3.1.1",
+    "jest": "^24.9.0",
+    "nodemailer-promise": "^2.0.0",
+    "nodemon": "2.0.2",
+    "npm-check-updates": "~4.0.1",
+    "prettier": "~1.19.1",
+    "supertest": "^4.0.2",
+    "tape": "~4.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:nnamdi88/cbt-app.git"
+  },
+  "keywords": [
+    "node",
+    "mongoose",
+    "express"
+  ]
+}
