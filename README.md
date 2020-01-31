@@ -3,7 +3,7 @@
 [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/madhums/node-express-mongoose)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/madhums/node-express-mongoose?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-## Node Express Mongoose
+## MERCHANT NOTIFICATION REVERSE API (JAVASCRIPT SAMPLE CODE)
 
 A boilerplate application that shows how a merchant can integrate Paga's Merchant Web Service Platform to process automated real-time payment transactions using secure RESTFul web service.
 
