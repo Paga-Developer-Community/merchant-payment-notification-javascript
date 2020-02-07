@@ -9,7 +9,7 @@ A boilerplate application that shows how a merchant can integrate Paga's Merchan
 
 ## Usage
 
-    git clone https://gitlab.com/nnamdi88/paga-notification-reverse-api.git
+    git clone https://github.com/pagadevcomm/merchant-payment-notification-javascript
     cd paga-notification-reverse-API
     npm install or yarn install
     cp .env.example .env
