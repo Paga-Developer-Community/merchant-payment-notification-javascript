@@ -57,7 +57,7 @@ let CustomerSchema = new Schema({
   },
   role: {
     type: String,
-    enum: ["Admin", "User"]
+    enum: ["Admin", "User","AFFILIATE"]
   },
   email: {
     type: String,
