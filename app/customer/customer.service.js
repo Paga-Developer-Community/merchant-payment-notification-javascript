@@ -31,7 +31,6 @@ exports.registerCustomer = async function(data) {
     newCustomer.setPassword(password);
     newCustomer.setRoles(secretKey);
     newCustomer.generateAuthToken();
-    // newCustomer.generateJWT();
     await newCustomer.save();
     return {
       error: false,
@@ -93,7 +92,6 @@ exports.validateCustomer = async function(data) {
   } catch (error) {
     throw new Error(error);
   }
-  //return {};
 };
 
 exports.authenticate = async function(username, password) {
