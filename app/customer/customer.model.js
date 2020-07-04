@@ -76,8 +76,10 @@ let CustomerSchema = new Schema({
 CustomerSchema.methods.setRoles = function(secretKey) {
   if (secretKey === process.env.MYPRIVATEKEY) {
     return (this.role = "Admin");
+  }else if(secretKey === process.env.SUBSIDIARYKEY) {
+    return (this.role = "AFFILIATE");
   }
-  return (this.role = "User");
+  return this.role ="User";
 };
 
 CustomerSchema.methods.setPassword = function(password) {
