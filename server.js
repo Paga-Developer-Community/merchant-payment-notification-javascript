@@ -2,7 +2,7 @@
 
 /*
  * nodejs-express-mongoose
- * Copyright(c) 2015 Madhusudhan Srinivasa <madhums8@gmail.com>
+ * Copyright(c) 2019 Nwabuokei Nnamdi
  * MIT Licensed
  */
 
