@@ -14,12 +14,17 @@ exports.submitTransaction = async function(data) {
       merchantTransactionId,
       currency,
       customerReference,
+      subsidiaryAccountNumber,
       customerFirstName,
       customerLastName,
       channel,
       description,
       customerPhoneNumber,
-      services
+      services,
+      subsidiaryFirstName,
+      subsidiaryLastName,
+      subsidiaryPhoneNumber,
+      amount
     } = transaction;
 
     console.log(customerFirstName);
