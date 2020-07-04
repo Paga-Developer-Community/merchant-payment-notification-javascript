@@ -45,7 +45,20 @@ exports.registerCustomer = async function(data) {
 
 exports.validateCustomer = async function(data) {
   try {
-    const { customerAccountNumber } = data;
+    const { customerAccountNumber, subsidiaryAccountNumber} = data;
+    console.log(subsidiaryAccountNumber);
+    if (subsidiaryAccountNumber) {
+      const subsidiaryAccountDetails = await CustomerSchema.findOne({
+        customerAccountNumber: subsidiaryAccountNumber
+      });
+     const {role} = subsidiaryAccountDetails;
+      if (subsidiaryAccountDetails &&  role == "AFFILIATE" ) {
+        return {
+          status:"SUCCESS",
+          message:"Notification received and processed successfully"
+        }
+      }
+    }
     const customerInfo = await CustomerSchema.findOne({
       customerAccountNumber
     });
