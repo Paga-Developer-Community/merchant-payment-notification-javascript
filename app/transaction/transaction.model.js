@@ -47,7 +47,6 @@ let TransactionSchema = new Schema({
     customerReference: {
       type: String,
       ref: "Customer",
-      required: true
     },
     channel: {
       type: String,
