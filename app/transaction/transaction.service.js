@@ -27,8 +27,37 @@ exports.submitTransaction = async function(data) {
       amount
     } = transaction;
 
-    console.log(customerFirstName);
-    const validCustomer = CustomerSchema.findOne({
+   
+    if (subsidiaryAccountNumber) {
+      const subsidiaryAccountDetails = await CustomerSchema.findOne({
+        customerAccountNumber:subsidiaryAccountNumber,
+      });
+      const {role,customerAccountNumber} = subsidiaryAccountDetails;
+      if (subsidiaryAccountDetails && role === "AFFILIATE") {
+        const newTransaction = await new TransactionSchema({
+          transaction: {
+            utcTransactionDateTime,
+            totalAmount:amount,
+            pagaTransactionId,
+            merchantTransactionId,
+            currency,
+            customerReference:customerAccountNumber,
+            customerFirstName:subsidiaryFirstName,
+            customerLastName:subsidiaryLastName,
+            channel,
+            customerPhoneNumber:subsidiaryPhoneNumber,
+          }
+        });
+        
+        await newTransaction.save();
+        return {
+          status: "SUCCESS",
+          message:"Notification received and processed successfully"
+        };
+      }
+
+    }
+    const validCustomer = await CustomerSchema.findOne({
       customerReference,
       customerFirstName,
       customerLastName,
